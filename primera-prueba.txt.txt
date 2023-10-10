@@ -1,1 +1,71 @@
 hola mundo
+
+
+// ... (Código anterior)
+
+// Clase Prestamo que implementa la interfaz PorPagar
+class Prestamo implements PorPagar {
+    private String numero;
+    private int numeroDeCuotas;
+    private double montoDeCuota;
+
+    public Prestamo(String numero, int numeroDeCuotas, double montoDeCuota) {
+        this.numero = numero;
+        this.numeroDeCuotas = numeroDeCuotas;
+        this.montoDeCuota = montoDeCuota;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public int getNumeroDeCuotas() {
+        return numeroDeCuotas;
+    }
+
+    public void setNumeroDeCuotas(int numeroDeCuotas) {
+        this.numeroDeCuotas = numeroDeCuotas;
+    }
+
+    public double getMontoDeCuota() {
+        return montoDeCuota;
+    }
+
+    public void setMontoDeCuota(double montoDeCuota) {
+        this.montoDeCuota = montoDeCuota;
+    }
+
+    // Implementación del método calcularPago de la interfaz PorPagar
+    @Override
+    public double calcularPago() {
+        return numeroDeCuotas * montoDeCuota;
+    }
+
+    @Override
+    public String toString() {
+        return "Número de Préstamo: " + numero + "\nNúmero de Cuotas: " + numeroDeCuotas + "\nMonto de Cuota: $" + montoDeCuota + "\nMonto Total del Préstamo: $" + calcularPago();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear objetos de las clases EmpleadoAsalariado y Prestamo
+        EmpleadoAsalariado empleadoAsalariado = new EmpleadoAsalariado("001", 2500.0, "Juan", 3000.0);
+        Prestamo prestamo = new Prestamo("P001", 12, 500.0);
+
+        // Calcular el pago del empleado y del préstamo
+        double pagoEmpleado = empleadoAsalariado.calcularPago();
+        double pagoPrestamo = prestamo.calcularPago();
+
+        // Imprimir los resultados
+        System.out.println("Resultado para el empleado:");
+        System.out.println("El empleado " + empleadoAsalariado.getNombre() + " tiene un salario mensual de: $" + pagoEmpleado);
+
+        System.out.println("\nResultado para el préstamo:");
+        System.out.println(prestamo.toString());
+    }
+}
