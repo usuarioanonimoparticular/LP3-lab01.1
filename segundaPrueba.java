@@ -1,10 +1,10 @@
-//* Declare una nueva clase Prestamo que implemente la interfaz PorPagar. La clase
-Prestamo deberá tener los atributos numeroDeCuotas y montoDeCuota. Cree el el
-constructor respectivo, metodos get, set y toString. El valor retornado por el método
-obtenerMontoPago de la clase Prestamo estará dado por el producto de numeroDeCuotas
-y montoDeCuota. Modifique la clase principal para que en los resultados mostrados se
-incluya también el del objeto de la clase Prestamo.
-//*
+//Declare una nueva clase Prestamo que implemente la interfaz PorPagar. La clase
+//Prestamo deberá tener los atributos numeroDeCuotas y montoDeCuota. Cree el el
+//constructor respectivo, metodos get, set y toString. El valor retornado por el método
+//obtenerMontoPago de la clase Prestamo estará dado por el producto de numeroDeCuotas
+//y montoDeCuota. Modifique la clase principal para que en los resultados mostrados se
+//incluya también el del objeto de la clase Prestamo.
+
 //hola mundo 2023 
 
 class Persona {
